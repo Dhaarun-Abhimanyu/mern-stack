@@ -1,0 +1,39 @@
+notes for myself, completely random and unordered
+##  EXPRESS/NODE MOSTLY
+# 1{
+    npm init -y
+    creates the package.json and initializes it
+}
+# 2{
+    npm
+    installs stuff
+}
+# 3{
+    package-lock.json
+    'locks' the versions of the dependencies used, while npm installing
+}
+# 4{
+    ctrl+C
+    terminate the terminal(more like express) lol
+}
+# 5{
+    idk why, but no spaces in the constants in .env, not sure why
+}
+# 6{
+    "type": "module"
+    instead of declaring constants, u can import the dependencies
+}
+# 7{
+    express routing
+    first create a different js file in routes;
+    then
+        const express = require('express');
+        const router = express.Router();
+    At the end of the file, export it
+        module.exports = router;
+
+    And in the main server js file, do something like this
+        const todoRoutes = require('./route/todolist.js');
+
+        app.use('/api/todolist', todoRoutes);
+}
