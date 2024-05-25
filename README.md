@@ -139,11 +139,34 @@ If everything goes well, then upon running and going to the [local server](http:
 
 And voila!! We have run an express app.
 
+### Environment Variables
+
+Now lets, say we wanna use api keys, passwords or connection strings. We cannot directly upload it to github, as it'll be open for everyone to use. That is where environment variables come in. First create a file caleld `.env`, which would contain all the secret keys that you are gonna use in ur project. For example, lets say i wanna store the 3000 port in it. In the `.env` file, just do this:
+
+```
+PORT=3000
+```
+
+Now, as usual, require the dotenv module in `server.js`, specifically do `require('dotenv').config()`. Then, in the place of `PORT`, use `process.env.PORT`
+
+Finally, add the .env file in the .gitignore so that it does not get pushed while doing git commit and push to your repository.
 
 <a id = "initialising-express"><a/>
 
 ### REST API
 
+A REST API (Representational State Transfer Application Programming Interface) is a set of rules and conventions that enable communication between different software systems over the internet. It follows the principles of REST, which emphasize a stateless client-server architecture, uniform interface, and scalability. REST APIs use standard HTTP methods such as GET, POST, PUT, DELETE, and PATCH to perform CRUD (Create, Read, Update, Delete) operations on resources. They typically communicate using JSON or XML formats for data interchange. REST APIs are widely used in modern web development, providing a flexible and efficient way to build distributed systems, including those in the MERN stack, where they facilitate interactions between the client-side and server-side components.
+
+
+* GET:
+
+  The GET method is used to request data from a specified resource. In a MERN stack, a GET request might be used to fetch a list of items from the server, retrieve a single item by its ID, or perform a search operation. It is commonly used in scenarios where you need to retrieve data without altering the server state.
+* POST:
+
+  The POST method is used to submit data to be processed to a specified resource. In a MERN stack, a POST request might be used to add a new item to a database, submit a form, or send data for processing. It is commonly used in scenarios where you need to create or update server-side data.
+* PUT:
+
+  aaa
 
 
 <a id = "rest-api"><a/>
@@ -174,8 +197,6 @@ And voila!! We have run an express app.
 * [An express specific playlist](https://youtube.com/playlist?list=PL_cUvD4qzbkwjmjy-KjbieZ8J9cGwxZpC&si=BfJ_AXvR2wWeUOn6)
 * [Express documentation](https://expressjs.com)
 * [Mongoose documentation](https://mongoosejs.com/docs/)
-
-
 
 <a id = "resources"><a/>
 
