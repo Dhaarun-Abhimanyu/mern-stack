@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #007BFF;
+  --secondary-color: #6c757d;
+  --bg-color: #f8f9fa;
+  --font-color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f8f9fa; /* Light background */
+  color: #333; /* Dark text */
+  padding: 10px 0;
+  border-bottom: 1px solid #e7e7e7; /* Add a subtle border */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: #333; /* Dark link color */
+  text-decoration: none;
+}
+
+.pages {
+  margin: 20px auto;
+  width: 80%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
